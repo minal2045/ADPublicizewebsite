@@ -1,0 +1,24 @@
+{% include "AdminHome/sidebar.html" %}
+
+<div class="content">
+  <h3 class="mb-4">Locations</h3>
+  <table class="table table-striped">
+    <tr>
+      <th>ID</th><th>Name</th><th>City</th><th>Ad Type</th><th>Price</th>
+    </tr>
+    {% for loc in data %}
+    <tr>
+      <td>{{ loc.locid }}</td>
+      <td>{{ loc.locname }}</td>
+      <td>{{ loc.city }}</td>
+      <td>{{ loc.adtype }}</td>
+      <td>{{ loc.advprice }}</td>
+      <td>
+        <a href="{% url 'edit_location' loc.locid %}" class="btn btn-sm btn-warning">Edit</a>
+        <a href="{% url 'delete_location' loc.locid %}" class="btn btn-sm btn-danger"
+           onclick="return confirm('Are you sure?')">Delete</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>

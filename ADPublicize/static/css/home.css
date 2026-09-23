@@ -1,0 +1,183 @@
+body {
+   padding-right: 0px !important;
+}
+.bg
+{
+   background-color: #b74316d9;
+   padding: 10px;
+   color: #ffffff;
+   text-align: center;
+}
+.navbarbg
+{
+   background-color: #343a40 !important;
+   padding: 5px;
+}
+.navpad
+{
+   padding-left: 5px !important;
+   padding-right: 5px !important;
+
+}
+.navlnk
+{
+   font-weight: bold ;
+/* color: #ffffff !important;
+*/ font-size: 14px;
+}
+.navbar-brand
+{
+   font-size: 25px !important;
+}
+.navbar-brand span
+{
+   font-size: 35px;
+   color: red;
+   font-weight: bold;
+}
+.banimg
+{
+   height: 600px !important;
+   width: 100% !important;
+}
+.grbutton{
+   border: 0px solid black;
+   height: 80px !important;
+   width: 80px !important;
+}
+.box{
+   padding-right: 20px;
+   padding-left: 47px;
+   float: left;
+}
+.busstand{
+   background-color: rgba(220, 19, 19,0.28);
+   height: 400px;
+}
+.texto2{
+   text-align: center;
+   color: #ff4d4d;
+   font-family: 'Tinos', serif;
+   text-transform: uppercase;
+}
+.texth2{
+   text-align: center;
+   color: #4d4d33;
+   font-family: 'Tinos', serif;
+   text-transform: uppercase;
+}
+h4{
+   font-family: 'Tinos', serif;
+   text-transform: uppercase;
+}
+.bg-location
+{
+   background-color:  #0e0e0ecc;
+   padding-bottom: 50px;
+   /*background-image: url(../images/locationbg.jpg);
+   background-size: cover;*/
+}
+.locationheading
+{
+   font-family: 'Tinos', serif;
+   text-transform: uppercase;
+   text-align: center;
+   color: white;
+}
+.form-inline
+{
+   font-family: 'Tinos', serif;
+   text-transform: uppercase;
+   text-align: center;
+   color: white;
+}
+
+.btn-loc
+{
+   color: #fff !important;
+   border-color: white !important;
+
+}
+.btn-loc:hover
+{
+    color: #fff;
+    background-color: #e63900 !important;
+    border-color: #e63900 !important;
+}
+.clienttele
+{
+   font-family: 'Tinos', serif;
+   text-transform: uppercase;
+   text-align: center;
+/* background-image: url(../images/clienttelebg.jpg);
+   color: white;*/
+}
+.gallerypage
+{
+   /*height: 400px;*/
+   background-color: #343a40;
+   font-family: 'Tinos', serif;
+   text-transform: uppercase;
+   text-align: center;
+   color: #ffffff;
+}
+.g-busstand{
+   background-color: rgba(255 ,255, 255,0.28);
+   /*height: 200px;*/
+
+}
+.g-img{
+   height: 200px !important;
+   width: 100%;
+}
+.contactuspage{
+   font-family: 'Tinos', serif;
+   text-transform: uppercase;
+}
+.cu-head-left{
+   color: #808080;
+   text-align: right;
+}
+.cu-body2{
+   background-color: #808080;
+   /*height: 500px;*/
+}
+.cu-body1{
+   background-color: #D3D3D3;
+/* height: 500px;*/
+}
+.cu-b-head{
+   text-align: center;
+}
+.cu-head-right{
+   color: #D3D3D3;
+   text-align: left;
+}
+.cu-b-head2{
+   text-align: center;
+   color: #D3D3D3;
+}
+.adlocbox{
+   margin-top: 5%;
+   box-shadow: 0px 0px 10px black;
+   padding: 15px;
+}
+.boxbckgrndcolor{
+   background-color: rgba(43,93,13,0.09) !important;
+}
+.addlocboxhead{
+   background-color: #b74316d9 !important;
+   padding: 10px !important;
+   text-align: center !important;
+}
+.addlocheadtext{
+   color: #D3D3D3 !important;
+}
+.viewdeatails{
+   font-family: 'Tinos', serif;
+   text-transform: uppercase;
+}
+.fillformbox{
+   padding: 15px;
+   box-shadow: 1px 1px 10px black;
+}

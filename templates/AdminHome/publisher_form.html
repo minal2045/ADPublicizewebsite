@@ -1,0 +1,46 @@
+{% extends "AdminHome/sidebar.html" %}
+{% block title %}Publisher Form{% endblock %}
+{% block content %}
+<nav class="navbar bg-white shadow-sm p-3 mb-3 rounded">
+  <span class="h5">{% if publisher %}Edit{% else %}Add{% endif %} Publisher</span>
+</nav>
+
+<form method="POST" class="shadow-sm p-4 bg-white rounded">
+  {% csrf_token %}
+  <div class="row g-3">
+    <div class="col-md-6">
+      <label>First Name</label>
+      <input type="text" name="fname" value="{{ publisher.fname }}" class="form-control" required>
+    </div>
+    <div class="col-md-6">
+      <label>Last Name</label>
+      <input type="text" name="lname" value="{{ publisher.lname }}" class="form-control" required>
+    </div>
+    <div class="col-md-6">
+      <label>Company Name</label>
+      <input type="text" name="cname" value="{{ publisher.cname }}" class="form-control" required>
+    </div>
+    <div class="col-md-6">
+      <label>Email</label>
+      <input type="email" name="emailid" value="{{ publisher.emailid }}" class="form-control" required>
+    </div>
+    <div class="col-md-6">
+      <label>Role</label>
+      <input type="text" name="role" value="{{ publisher.role }}" class="form-control" required>
+    </div>
+    <div class="col-md-6">
+      <label>Address 1</label>
+      <input type="text" name="addres1" value="{{ publisher.addres1 }}" class="form-control" required>
+    </div>
+    <div class="col-md-6">
+      <label>Address 2</label>
+      <input type="text" name="addres2" value="{{ publisher.addres2 }}" class="form-control">
+    </div>
+    <div class="col-md-6">
+      <label>Password</label>
+      <input type="text" name="password" value="{{ publisher.password }}" class="form-control" required>
+    </div>
+  </div>
+  <button class="btn btn-success mt-3">Save</button>
+</form>
+{% endblock %}

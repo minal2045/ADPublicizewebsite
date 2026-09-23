@@ -1,0 +1,86 @@
+{% extends "AdminHome/sidebar.html" %}
+{% block title %}Ad Request Form{% endblock %}
+{% block content %}
+<nav class="navbar bg-white shadow-sm p-3 mb-3 rounded">
+  <span class="h5">{% if req %}Edit{% else %}Add{% endif %} Advertisement Request</span>
+</nav>
+
+<form method="POST" class="shadow-sm p-4 bg-white rounded">
+  {% csrf_token %}
+  <div class="row g-3">
+
+    <div class="col-md-6">
+      <label>Advertiser ID</label>
+      <input type="number" name="adverid" value="{{ req.adverid }}" class="form-control" required>
+    </div>
+    <div class="col-md-6">
+      <label>Publisher ID</label>
+      <input type="number" name="pubid" value="{{ req.pubid }}" class="form-control" required>
+    </div>
+
+    <div class="col-md-6">
+      <label>Location ID</label>
+      <input type="number" name="locid" value="{{ req.locid }}" class="form-control" required>
+    </div>
+    <div class="col-md-6">
+      <label>Location Address</label>
+      <input type="text" name="locaddress" value="{{ req.locaddress }}" class="form-control" required>
+    </div>
+
+    <div class="col-md-6">
+      <label>Area</label>
+      <input type="text" name="parea" value="{{ req.parea }}" class="form-control" required>
+    </div>
+    <div class="col-md-6">
+      <label>City</label>
+      <input type="text" name="city" value="{{ req.city }}" class="form-control" required>
+    </div>
+
+    <div class="col-md-6">
+      <label>Ad Type</label>
+      <select name="adtype" class="form-control" required>
+        <option value="Banner" {% if req.adtype == "Banner" %}selected{% endif %}>Banner</option>
+        <option value="Bus Stand" {% if req.adtype == "Bus Stand" %}selected{% endif %}>Bus Stand</option>
+        <option value="Electric Poll" {% if req.adtype == "Electric Poll" %}selected{% endif %}>Electric Poll</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <label>Ad Size</label>
+      <input type="text" name="advsize" value="{{ req.advsize }}" class="form-control" required>
+    </div>
+
+    <div class="col-md-6">
+      <label>Price</label>
+      <input type="number" name="advprice" value="{{ req.advprice }}" class="form-control" required>
+    </div>
+
+    <div class="col-md-6">
+      <label>Client First Name</label>
+      <input type="text" name="fname" value="{{ req.fname }}" class="form-control" required>
+    </div>
+    <div class="col-md-6">
+      <label>Client Last Name</label>
+      <input type="text" name="lname" value="{{ req.lname }}" class="form-control" required>
+    </div>
+    <div class="col-md-6">
+      <label>Company Name</label>
+      <input type="text" name="cname" value="{{ req.cname }}" class="form-control" required>
+    </div>
+    <div class="col-md-6">
+      <label>Contact Number</label>
+      <input type="number" name="contactno" value="{{ req.contactno }}" class="form-control" required>
+    </div>
+
+    <div class="col-md-6">
+      <label>Start Date</label>
+      <input type="date" name="starttime" value="{{ req.starttime|date:'Y-m-d' }}" class="form-control" required>
+    </div>
+    <div class="col-md-6">
+      <label>End Date</label>
+      <input type="date" name="lastdate" value="{{ req.lastdate|date:'Y-m-d' }}" class="form-control" required>
+    </div>
+  </div>
+
+  <button class="btn btn-success mt-3">Save</button>
+</form>
+{% endblock %}

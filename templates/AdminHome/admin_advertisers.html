@@ -1,0 +1,24 @@
+{% include "AdminHome/sidebar.html" %}
+
+<div class="content">
+  <h3 class="mb-4">Advertisers</h3>
+  <table class="table table-striped">
+    <tr>
+      <th>ID</th><th>Name</th><th>Email</th><th>Gender</th><th>Role</th>
+    </tr>
+    {% for a in data %}
+    <tr>
+      <td>{{ a.adverid }}</td>
+      <td>{{ a.fname }} {{ a.lname }}</td>
+      <td>{{ a.emailid }}</td>
+      <td>{{ a.gender }}</td>
+      <td>{{ a.role }}</td>
+      <td>
+        <a href="{% url 'edit_advertiser' a.adverid %}" class="btn btn-sm btn-warning">Edit</a>
+        <a href="{% url 'delete_advertiser' a.adverid %}" class="btn btn-sm btn-danger"
+           onclick="return confirm('Are you sure?')">Delete</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
