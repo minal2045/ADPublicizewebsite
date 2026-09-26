@@ -100,7 +100,7 @@
         {% for foo in disadv %}
             <tr>
                 <td>
-                    <img src="{% static 'upload/' %}{{ foo.locimage }}" height="300" width="500">
+                    <img src="{{ foo.locimage.url }}" height="300" width="500">
                 </td>
                 <td>
                     <h5 class="viewdeatails"><b>Advertise Location:</b> {{ foo.locaddress }}</h5>

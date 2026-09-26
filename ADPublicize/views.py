@@ -127,10 +127,8 @@ def adadvpage(request):
 # Form for add location
 def addlocation(request):
     if request.method == "POST":
-        pubimg = request.FILES["locimage"]
         form = AddlocationForm(request.POST, request.FILES)
         if form.is_valid():
-            handle_uploaded_file(request.FILES["locimage"])
             form.save()
             messages.add_message(request, messages.INFO, 'Successfully Add location')
             return render(request, "Publisher/publisherhome.html")
@@ -138,12 +136,6 @@ def addlocation(request):
         form = AddlocationForm()
 
     return render(request, 'Publisher/publisherhome.html', {'form': form})
-
-
-def handle_uploaded_file(f):
-    with open('ADPublicize/static/upload/' + f.name, 'wb+') as destination:
-        for chunk in f.chunks():
-            destination.write(chunk)
 
 
 # View location in Publisher site

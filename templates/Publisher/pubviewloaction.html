@@ -108,8 +108,8 @@
         {% for d in disppub  %}
             <tr>
                 <td>
-                    <a href="{% static 'upload/' %}{{ d.locimage }}">
-                        <img src="{% static 'upload/' %}{{ d.locimage }}" height="100" width="200">
+                    <a href="{{ d.locimage.url }}">
+                        <img src="{{ d.locimage.url }}" height="100" width="200">
                     </a>
                 </td>
                 <td>{{ d.locaddress }}</td>
